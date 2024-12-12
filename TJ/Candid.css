@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css?family=Inter:wght@500;600;700&display-swap');
+@import url('https://cdn.jsdelivr.net/npm/@fontsource/yuji-mai/index.css');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif; 
+}
+
+body {
+    height: 100vh;   
+    margin: 0;
+    display: grid;
+    background-color: #ffd689;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: white; 
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); 
+    position: fixed; 
+    top: 0;
+    height: 80px;
+    width: 100%;
+    z-index: 10;
+}
+  
+.logo {
+    display: flex;
+    align-items: center;
+}
+  
+.logo img {
+    height: 35px;
+    margin-right: 0.5rem;
+}
+  
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+  }
+  
+  nav a {
+    text-decoration: none;
+    color: #046307;
+    font-size: 1rem;
+    transition: color 0.3s;
+  }
+  
+  nav a:hover {
+    color: #034a05;
+    background-color: #ffe498;
+    border-radius: 10px;
+    padding: 5px;
+    transition: 0.09s;
+  }
+  
+.content h3{
+    margin-top: 7%;
+    padding: 1rem;
+    text-align: center;
+    justify-content: center;
+    color: rgb(0, 0, 0);
+    font-size: 40px;   
+    font-family: "Yuji Mai";
+}
+
+.description {
+    margin: 1%;
+    font-size: 20px;
+    text-align: justify;
+}
+
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 10px; 
+    padding: 10px; 
+    background-color: rgb(255, 214, 137);
+    border-radius: 8px; 
+
+}
+
+.grid-image {
+    width: 100%; 
+    height: auto; 
+    aspect-ratio: 4 / 3; 
+    object-fit: cover; 
+    border-radius: 4px; 
+    transition: transform 0.3s ease; 
+}
+
+.grid-image:hover {
+    transform: scale(1.05); 
+    box-shadow: 10px 25px 50px 0px rgb(255, 251, 0);
+    cursor: pointer;
+}
+
+footer {
+    background-color: #0d4e26; 
+    padding: 20px 0;
+    color: white;
+    position: static; 
+    bottom: 0; 
+    width: 100%; 
+    text-align: center; 
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap; 
+    align-items: center;
+    justify-content: space-around;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+  
+.logo img {
+    width: 150px;
+    height: auto;
+}
+  
+.logo img {
+    width: 150px;
+    height: auto;
+}
+  
+.social-links {
+    display: flex;
+    gap: 50px; 
+}
+  
+.social-links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+  
+.social-links li {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+}
+  
+.social-links li::before {
+    content: "●";
+    margin-right: 10px;
+    color: white;
+    font-size: 14px;
+}
+  
+.social-links li {
+    color: white; 
+}
+  
+.social-links li a {
+    text-decoration: none; 
+    color: white; 
+    font-size: 16px;
+}
+  
+.social-links li a:hover {
+    text-decoration: underline; 
+}
