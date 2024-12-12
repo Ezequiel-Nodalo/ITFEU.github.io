@@ -1,0 +1,356 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+/* Header Styling Start here for navbar*/
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: white; /* Solid background color for separation */
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Optional shadow for better visibility */
+  position: fixed; /* Keep it fixed at the top */
+  top: 0;
+  height: 80px;
+  width: 100%;
+  z-index: 10;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  height: 60px;
+  margin-right: 0.5rem;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+nav a {
+  text-decoration: none;
+  color: #046307;
+  font-size: 1rem;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #034a05;
+  background-color: #ffe498;
+  border-radius: 10px;
+  padding: 5px;
+  transition: 0.09s;
+}
+/*End here for navbar*/
+
+/* Hero Section */
+.hero {
+  position: relative;
+  height: 100vh;
+  background: url(Main_page_images/background.png) center/cover no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  margin-top: 80px; /* Adjust for the fixed header height */
+}
+
+.hero .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.hero h1 {
+  font-family: "Cormorant Garamond", serif;
+    font-size: 80px;
+    font-weight: 500;
+    z-index: 2;
+    white-space: nowrap;
+    color: white;
+  }
+  
+  @media (max-width: 1200px) {
+    .hero h1 {
+      font-size: 70px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .hero h1 {
+      font-size: 50px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .hero h1 {
+      font-size: 40px;
+    }
+  }
+
+.hero p {
+  font-size: 1rem;
+  margin-top: none;
+  z-index: 2;
+  max-width: 600px;
+}
+
+/* Para Responsive sa Iba't ibang sizes ng screen yung p */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 45px;
+  }
+
+  .hero p {
+    font-size: 0.9rem;
+  }
+
+  nav ul {
+    gap: 1rem;
+  }
+
+  nav a {
+    font-size: 0.9rem;
+  }
+}
+
+h1 {
+  text-align: center;
+  color: #444;
+}
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 1rem;
+}
+.blog-layout {
+  margin-bottom: 2rem;
+}
+.section-title {
+  font-size: 1.5rem;
+  margin: 1rem 0;
+  color: #222;
+}
+
+.green-banner{
+  height: 80px;
+  background-color:#0d4e26;
+}
+.green-banner h1{
+  color: white;
+  font-size: 55px;
+  font-family: "Tourney", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+/* Blog Card */
+.content-container {
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background: #fff;
+}
+.content-container:hover {
+  transform: scale(1.05); /* Slightly increase size on hover */
+}
+
+.content-container img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+.text-container {
+  padding: 1rem;
+}
+.content-title {
+  font-size: 1.25rem;
+  color: #333;
+}
+.content-preview {
+  font-size: 0.9rem;
+  color: #666;
+}
+.read-more {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: bold;
+}
+.featured-content {
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background: #fff;
+}
+.featured-content:hover {
+  transform: scale(1.05); /* Slightly increase size on hover */
+}
+
+.featured-content img {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+}
+/* GL */
+.campus-events {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* LL */
+.campus-stories {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.campus-stories .content-container {
+  display: flex;
+  flex-direction: row;
+}
+.campus-stories img {
+  width: 200px;
+  height: 150px;
+  flex-shrink: 0;
+}
+.campus-stories .text-container {
+  flex-grow: 1;
+}
+
+/* FL */
+.seasonal-events .content-container {
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+}
+.seasonal-events img {
+  width: 100%;
+  height: 250px;
+}
+.seasonal-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+/* Grid Section */
+.grid-section {
+  padding: 20px;
+  background-color: #fff;
+}
+
+/* Grid Container */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+.grid-item:hover{
+  transform: scale(1.05);
+}
+/* Grid Item */
+.grid-item {
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  text-align: left;
+  padding: 15px;
+}
+
+/* Thumbnail */
+.thumbnail {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 10px;
+}
+
+
+footer {
+  background-color: #0d4e26; /* Match the dark blue background */
+  padding: 20px 0;
+  color: white;
+}
+
+.footer-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.logo img {
+  width: 150px;
+  height: auto;
+}
+
+.logo img {
+  width: 150px;
+  height: auto;
+}
+
+.social-links {
+  display: flex;
+  gap: 50px; /* Space between the two columns */
+}
+
+.social-links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.social-links li {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+}
+
+.social-links li::before {
+  content: "●";
+  margin-right: 10px;
+  color: white;
+  font-size: 14px;
+}
+
+.social-links li {
+  color: white; /* Text color for the list items */
+}
+
+.social-links li a {
+  text-decoration: none; /* Removes underline */
+  color: white; /* Makes links white */
+  font-size: 16px;
+}
+
+.social-links li a:hover {
+  text-decoration: underline; /* Adds underline on hover */
+}
+
